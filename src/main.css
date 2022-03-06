@@ -1,3 +1,24 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+    label {
+        @apply block mb-1 text-sm font-medium;
+    }
+
+    button:disabled {
+        @apply cursor-not-allowed bg-opacity-40 hover:bg-opacity-40;
+    }
+
+    .btn-primary {
+        @apply bg-blue-700 text-white px-6 py-3 rounded-lg hover:bg-opacity-80;
+    }
+}
+
+@layer components {
+    .form-input,
+    .form-textarea {
+        @apply px-4 py-3 rounded-lg;
+    }
+}
