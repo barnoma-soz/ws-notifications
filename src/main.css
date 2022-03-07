@@ -12,7 +12,18 @@
     }
 
     .btn-primary {
-        @apply bg-blue-700 text-white px-6 py-3 rounded-lg hover:bg-opacity-80;
+        @apply px-6 py-3 text-white bg-blue-700 rounded-lg hover:bg-opacity-80;
+    }
+
+    /* Toastify */
+    .toastify.info {
+        @apply text-white bg-gradient-to-r from-blue-700 to-blue-600;
+    }
+    .toastify.success {
+        @apply text-white bg-gradient-to-r from-green-700 to-green-600;
+    }
+    .toastify.error {
+        @apply text-white bg-gradient-to-r from-red-700 to-red-600;
     }
 }
 

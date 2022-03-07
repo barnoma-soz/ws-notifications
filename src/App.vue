@@ -37,7 +37,8 @@
 
 <script>
 import { computed, ref } from 'vue'
-import axios from 'axios';
+import axios from 'axios'
+import Toastify from 'toastify-js'
 
 export default {
   setup() {
@@ -58,6 +59,11 @@ export default {
         case 'response':
           if (data.ok) {
             isSubscribed.value = true;
+
+            Toastify({
+              text: "Вы успешно подписаны",
+              className: "success",
+            }).showToast();
           }
           break;
 
@@ -105,7 +111,12 @@ export default {
         access_token: accessToken.value,
         unread_only: true,
       }).then(({data}) => {
-        //
+        // Пробегаемся по списку сообщений и показываем Toastify
+
+        // Toastify({
+        //   text: "",
+        //   className: "info",
+        // }).showToast();
       });
     }
 
